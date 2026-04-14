@@ -1,0 +1,19 @@
+php sqliteSeeder.php
+
+php -S localhost:8000
+
+GET http://localhost:8000/users
+POST http://localhost:8000/users
+GET http://localhost:8000/users/1
+PUT http://localhost:8000/users/1
+DELETE http://localhost:8000/users/1
+
+curl -X POST http://127.0.0.1:8000/users \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Ivan","email":"ivan@example.com"}'
+
+  curl -X PUT http://127.0.0.1:8000/users/1 \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Ivan2","email":"ivan2@example.com"}'
+
+  curl -X DELETE http://127.0.0.1:8000/users/1
